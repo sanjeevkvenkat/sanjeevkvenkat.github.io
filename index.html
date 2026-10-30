@@ -160,15 +160,15 @@ footer{padding:26px 0;text-align:center;color:#7b87a0;font-size:.85rem;backgroun
       <div class="work">
         <span class="flag">Flagship</span>
         <h3>Agentic Governance Harness for Data Products</h3>
-        <p>Most governance lives in documents nobody reads while building. This harness fixes that: ontology-driven agents working in production apply the firm's data governance standards automatically, at the moment data products and pipelines are being developed. They check data contracts, quality rules, lineage, ownership, and classification — then tell builders exactly what to fix, which DQ rules to add, and what's missing before sign-off.</p>
-        <p class="outcome">Findings tracked through to implementation, sign-off on evidence instead of promises, production deviations caught and reported — every release leaves the data estate more trusted than it found it.</p>
-        <div class="tags"><span class="tag">Multi-agent systems</span><span class="tag">AWS Bedrock</span><span class="tag">LangGraph</span><span class="tag">MCP</span><span class="tag">Ontology</span><span class="tag">Data contracts</span></div>
+        <p>An autonomous verification layer for data products. Governance policy is encoded as versioned, testable rules over a domain ontology; supervisor agents decompose those rules into checks that worker agents execute against data contracts, quality results, lineage graphs, and classification metadata — on every build, not at review time. Failures become assigned findings with suggested DQ rules and concrete fixes. Implementations are re-verified automatically, and sign-off requires green evidence, not attestations. In production, drift monitors watch for deviation and reopen the loop.</p>
+        <p class="outcome">Governance shifts from periodic review to continuous enforcement — fewer late-stage surprises, auditable evidence, and trust that compounds with every release.</p>
+        <div class="tags"><span class="tag">Multi-agent orchestration</span><span class="tag">LangGraph</span><span class="tag">AWS Bedrock</span><span class="tag">MCP tools</span><span class="tag">Policy-as-code</span><span class="tag">CI/CD gates</span><span class="tag">Drift detection</span></div>
       </div>
       <div class="work">
         <h3>AI Data Product Readiness Assistant</h3>
-        <p>The conversational front door to governed data. Producers and reviewers ask plain-English questions — "is this product ready?", "what's blocking sign-off?" — and get live answers drawn from governance scorecards, DQ results, lineage docs, and approval evidence, plus a draft briefing for the committee. Where the harness does the checking behind the scenes, this is the conversation on top of it.</p>
-        <p class="outcome">Review meetings start from a shared, current picture instead of a slide deck assembled the night before.</p>
-        <div class="tags"><span class="tag">AWS Bedrock</span><span class="tag">Claude</span><span class="tag">RAG</span><span class="tag">LangGraph</span></div>
+        <p>A copilot for the people in the process. Producers ask "what's blocking my sign-off?" and reviewers ask "is this ready for committee?" — and get plain-language answers grounded in live governance data, plus a generated briefing pack. The humans keep the decisions; the assistant does the gathering, summarizing, and drafting.</p>
+        <p class="outcome">Reviews start from a shared, current picture — less prep work, faster decisions, no stale slide decks.</p>
+        <div class="tags"><span class="tag">Conversational AI</span><span class="tag">Claude</span><span class="tag">RAG</span><span class="tag">LangChain</span><span class="tag">FastAPI</span><span class="tag">React</span><span class="tag">Human-in-the-loop</span></div>
       </div>
       <div class="work">
         <h3>Conversational AI for Risk &amp; Investment Data</h3>
