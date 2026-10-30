@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sanjeev Kumar Venkataraman — AI Engineer, Agentic AI & Data Governance</title>
-<meta name="description" content="Sanjeev Kumar Venkataraman — I build production AI systems: agentic AI, RAG, and governance harnesses that make enterprise data safe to build on. Toronto, Canada. TN-visa eligible for US roles.">
+<meta name="description" content="Sanjeev Kumar Venkataraman — AI engineer shipping production agentic systems on governed data. AWS Bedrock, LangGraph, RAG, multi-agent systems. Toronto. TN-visa eligible.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
@@ -18,9 +18,10 @@
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:'Inter',system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65;-webkit-font-smoothing:antialiased}
-h1,h2,h3{font-family:'Sora','Inter',sans-serif;letter-spacing:-.02em;line-height:1.2}
+h1,h2,h3{font-family:'Sora','Inter',sans-serif;letter-spacing:-.02em;line-height:1.25}
 a{text-decoration:none;color:inherit}
 .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.wrap-narrow{max-width:780px;margin:0 auto;padding:0 24px}
 nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(11,18,32,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08)}
 .nav-in{max-width:1120px;margin:0 auto;padding:0 24px;height:66px;display:flex;align-items:center;justify-content:space-between}
 .brand{color:#fff;font-family:'Sora';font-weight:800;font-size:1.05rem}
@@ -35,100 +36,82 @@ nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(11,18,32,.82)
 .btn-ghost{border:1.5px solid rgba(255,255,255,.35);color:#fff}
 .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.08)}
 .burger{display:none;background:none;border:0;color:#fff;font-size:1.6rem;cursor:pointer}
-.hero{background:radial-gradient(1100px 520px at 80% -10%,rgba(14,165,165,.22),transparent 60%),radial-gradient(800px 420px at 10% 110%,rgba(217,164,65,.12),transparent 60%),linear-gradient(160deg,#0b1220 0%,#0f1830 60%,#0b1220 100%);color:#fff;padding:158px 0 96px;position:relative;overflow:hidden}
+.hero{background:radial-gradient(1100px 520px at 80% -10%,rgba(14,165,165,.22),transparent 60%),linear-gradient(160deg,#0b1220 0%,#0f1830 60%,#0b1220 100%);color:#fff;padding:160px 0 100px;position:relative;overflow:hidden}
 .hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(700px 420px at 50% 20%,#000 30%,transparent 75%)}
-.hero-in{position:relative;display:grid;grid-template-columns:1.35fr .65fr;gap:48px;align-items:center}
-.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.8rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#7ee8e8;background:rgba(14,165,165,.12);border:1px solid rgba(14,165,165,.35);padding:8px 16px;border-radius:999px;margin-bottom:22px}
-.eyebrow i{width:8px;height:8px;border-radius:50%;background:#2dd4bf;box-shadow:0 0 12px #2dd4bf;animation:pulse 2s infinite}
-@keyframes pulse{50%{opacity:.4}}
-.hero h1{font-size:clamp(2.4rem,5vw,3.7rem);font-weight:800;margin-bottom:14px}
-.hero h1 em{font-style:normal;background:linear-gradient(92deg,#2dd4bf,#7ee8e8);-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero .role{font-size:1.18rem;color:#c7d0e2;font-weight:500;margin-bottom:6px}
-.hero .visa{font-size:.92rem;color:#7ee8e8;font-weight:600;margin-bottom:18px}
-.hero p.lead{color:#a9b4cc;max-width:600px;margin-bottom:32px;font-size:1.02rem}
-.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
-.hero-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:28px;backdrop-filter:blur(6px)}
-.hero-card h3{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:#7ee8e8;margin-bottom:18px}
-.stat{display:flex;justify-content:space-between;align-items:baseline;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.09)}
-.stat:last-child{border:0}
-.stat b{font-family:'Sora';font-size:1.5rem;color:#fff}
-.stat span{font-size:.85rem;color:#a9b4cc}
-section{padding:88px 0}
+.hero-in{position:relative}
+.kicker{font-size:.8rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#7ee8e8;margin-bottom:20px}
+.hero h1{font-size:clamp(2.2rem,4.6vw,3.2rem);font-weight:800;margin-bottom:10px}
+.hero .statement{font-size:clamp(1.25rem,2.6vw,1.7rem);font-weight:600;color:#e6ecf7;max-width:680px;margin-bottom:28px}
+.hero .statement em{font-style:normal;color:#2dd4bf}
+.proof{list-style:none;max-width:700px;margin-bottom:14px}
+.proof li{position:relative;padding:10px 0 10px 28px;color:#a9b4cc;font-size:1rem;border-bottom:1px solid rgba(255,255,255,.08)}
+.proof li:last-child{border:0}
+.proof li::before{content:"→";position:absolute;left:0;color:#2dd4bf;font-weight:700}
+.proof li b{color:#e6ecf7;font-weight:600}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+section{padding:84px 0}
 .alt{background:var(--paper2)}
-.sec-head{max-width:720px;margin-bottom:48px}
-.kicker{font-size:.78rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-d);margin-bottom:12px}
-.sec-head h2{font-size:clamp(1.7rem,3.4vw,2.4rem);margin-bottom:12px}
-.sec-head p{color:var(--muted)}
-.timeline{position:relative;padding-left:34px}
-.timeline::before{content:"";position:absolute;left:9px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--accent),var(--line))}
-.t-item{position:relative;margin-bottom:38px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px 30px;box-shadow:var(--shadow)}
-.t-item::before{content:"";position:absolute;left:-31px;top:32px;width:14px;height:14px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 5px var(--accent-soft)}
-.t-item .when{font-size:.82rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-d);margin-bottom:6px}
-.t-item h3{font-size:1.25rem;margin-bottom:2px}
-.t-item .org{color:var(--muted);font-weight:500;margin-bottom:14px;font-size:.95rem}
-.t-item ul{list-style:none}
-.t-item li{position:relative;padding-left:22px;margin-bottom:10px;color:#33415c;font-size:.96rem}
-.t-item li::before{content:"▸";position:absolute;left:0;color:var(--accent);font-weight:700}
-.feature{background:linear-gradient(150deg,#0b1220,#12203c);color:#fff;border-radius:22px;padding:44px;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;box-shadow:var(--shadow);margin-bottom:28px;position:relative;overflow:hidden}
-.feature::before{content:"";position:absolute;inset:0;background:radial-gradient(500px 260px at 85% 0%,rgba(14,165,165,.25),transparent 65%)}
-.feature>div{position:relative}
-.feature .flag{display:inline-block;font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#7ee8e8;border:1px solid rgba(14,165,165,.4);background:rgba(14,165,165,.12);padding:7px 14px;border-radius:999px;margin-bottom:18px}
-.feature h3{font-size:clamp(1.4rem,2.6vw,1.9rem);margin-bottom:16px}
-.feature p{color:#b9c3d8;font-size:.98rem;margin-bottom:14px}
-.feature .tags{margin-top:20px}
-.feature .tag{background:rgba(14,165,165,.14);color:#7ee8e8;border:1px solid rgba(14,165,165,.3)}
-.feature-side{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:28px;align-self:start}
-.feature-side h4{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:#7ee8e8;margin-bottom:16px}
-.fstep{display:flex;gap:12px;margin-bottom:14px;font-size:.9rem;color:#c7d0e2}
-.fstep b{flex:none;width:26px;height:26px;border-radius:50%;background:var(--accent);color:#fff;font-size:.78rem;display:flex;align-items:center;justify-content:center}
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px;display:flex;flex-direction:column;box-shadow:var(--shadow);transition:transform .2s,box-shadow .25s}
-.card:hover{transform:translateY(-6px);box-shadow:0 26px 55px -18px rgba(15,23,42,.3)}
-.card .icon{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,var(--accent),#0b6f6f);display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:18px}
-.card h3{font-size:1.12rem;margin-bottom:10px}
-.card p{color:var(--muted);font-size:.93rem;flex:1;margin-bottom:18px}
+.sec-head{margin-bottom:44px}
+.sec-head h2{font-size:clamp(1.6rem,3.2vw,2.2rem);margin-bottom:8px}
+.sec-head .sub{color:var(--muted);font-size:1.02rem}
+.work{border-top:1px solid var(--line);padding:30px 0}
+.work:first-of-type{border-top:0}
+.work .flag{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-d);background:var(--accent-soft);border:1px solid rgba(14,165,165,.3);padding:6px 13px;border-radius:999px;margin-bottom:12px}
+.work h3{font-size:1.35rem;margin-bottom:8px}
+.work p{color:#33415c;max-width:760px;margin-bottom:8px}
+.work .outcome{color:var(--ink);font-weight:500;max-width:760px;margin-bottom:14px}
+.work .outcome::before{content:"↳ ";color:var(--accent);font-weight:700}
 .tags{display:flex;flex-wrap:wrap;gap:8px}
 .tag{font-size:.75rem;font-weight:600;background:var(--accent-soft);color:var(--accent-d);padding:5px 12px;border-radius:999px}
-.skills-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
-.skill-box{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow)}
-.skill-box h3{font-size:1.02rem;margin-bottom:16px;display:flex;align-items:center;gap:10px}
-.skill-box h3 i{font-style:normal;width:34px;height:34px;border-radius:10px;background:var(--accent-soft);display:inline-flex;align-items:center;justify-content:center;font-size:1.05rem}
-.pills{display:flex;flex-wrap:wrap;gap:8px}
-.pill{font-size:.83rem;font-weight:500;background:var(--paper2);border:1px solid var(--line);color:#33415c;padding:7px 14px;border-radius:999px;transition:all .18s}
-.pill:hover{border-color:var(--accent);color:var(--accent-d);background:var(--accent-soft)}
+.lab{margin-top:34px;background:#fff;border:1.5px dashed #b9c6dd;border-radius:var(--radius);padding:30px 32px;display:flex;gap:18px;align-items:flex-start}
+.lab .ic{font-size:1.6rem}
+.lab b{display:block;margin-bottom:6px}
+.lab p{color:var(--muted);font-size:.95rem}
+.timeline{position:relative;padding-left:34px;margin-top:8px}
+.timeline::before{content:"";position:absolute;left:9px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--accent),var(--line))}
+.t-item{position:relative;margin-bottom:30px}
+.t-item::before{content:"";position:absolute;left:-31px;top:8px;width:14px;height:14px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 5px var(--accent-soft)}
+.t-item .org{font-weight:700;font-size:1.08rem}
+.t-item .roleline{color:var(--muted);font-size:.95rem;margin:2px 0 10px}
+.t-item ul{list-style:none}
+.t-item li{position:relative;padding-left:22px;margin-bottom:8px;color:#33415c;font-size:.95rem}
+.t-item li::before{content:"▸";position:absolute;left:0;color:var(--accent);font-weight:700}
+.stack-row{display:grid;grid-template-columns:170px 1fr;gap:18px;padding:18px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.stack-row:last-child{border:0}
+.stack-row .lbl{font-weight:700;font-size:.9rem}
+.stack-row .items{color:#33415c;font-size:.95rem}
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:24px}
 .panel{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px;box-shadow:var(--shadow)}
-.panel h3{font-size:1.15rem;margin-bottom:20px}
-.cert{display:flex;gap:14px;align-items:flex-start;padding:13px 0;border-bottom:1px solid var(--line)}
+.panel h3{font-size:1.15rem;margin-bottom:18px}
+.cert{display:flex;gap:14px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--line)}
 .cert:last-child{border:0}
-.cert .badge{flex:none;width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,#d9a441,#b57f22);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.8rem}
-.cert b{display:block;font-size:.95rem}
-.cert span{font-size:.83rem;color:var(--muted)}
-.edu{padding:16px 0;border-bottom:1px solid var(--line)}
+.cert .badge{flex:none;width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,#d9a441,#b57f22);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.75rem}
+.cert b{display:block;font-size:.93rem}
+.cert span{font-size:.82rem;color:var(--muted)}
+.edu{padding:15px 0;border-bottom:1px solid var(--line)}
 .edu:last-child{border:0}
-.edu b{display:block;font-size:1rem}
-.edu span{font-size:.88rem;color:var(--muted)}
-.edu .yr{font-size:.78rem;font-weight:700;color:var(--accent-d);letter-spacing:.06em}
+.edu b{display:block;font-size:.98rem}
+.edu span{font-size:.87rem;color:var(--muted)}
+.edu .yr{font-size:.76rem;font-weight:700;color:var(--accent-d);letter-spacing:.06em}
 .contact{background:linear-gradient(160deg,#0b1220,#0f1830);color:#fff;text-align:center}
-.contact h2{font-size:clamp(1.8rem,3.6vw,2.6rem);margin-bottom:14px}
-.contact p{color:#a9b4cc;max-width:600px;margin:0 auto 16px}
-.contact .visa-note{color:#7ee8e8;font-weight:600;margin-bottom:34px}
-.c-links{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:40px}
+.contact h2{font-size:clamp(1.8rem,3.6vw,2.5rem);margin-bottom:14px}
+.contact p{color:#a9b4cc;max-width:580px;margin:0 auto 14px}
+.contact .tn{color:#7ee8e8;font-weight:600;margin-bottom:32px}
+.c-links{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:36px}
 .c-link{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);color:#fff;padding:13px 24px;border-radius:999px;font-weight:600;font-size:.93rem;transition:all .2s}
 .c-link:hover{background:var(--accent);border-color:var(--accent);transform:translateY(-2px)}
 footer{padding:26px 0;text-align:center;color:#7b87a0;font-size:.85rem;background:#080d18}
 .rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
 .rv.on{opacity:1;transform:none}
 @media(max-width:900px){
-  .hero-in,.feature{grid-template-columns:1fr}
-  .grid3,.skills-grid,.two-col{grid-template-columns:1fr}
+  .two-col{grid-template-columns:1fr}
+  .stack-row{grid-template-columns:1fr;gap:6px}
   .nav-links{position:fixed;top:66px;left:0;right:0;background:#0b1220;flex-direction:column;gap:0;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.1);display:none}
   .nav-links.open{display:flex}
   .nav-links a{padding:13px 24px;width:100%}
   .nav-links .btn{margin:10px 24px}
   .burger{display:block}
-  section{padding:64px 0}
-  .feature{padding:32px}
+  section{padding:60px 0}
 }
 </style>
 </head>
@@ -137,7 +120,7 @@ footer{padding:26px 0;text-align:center;color:#7b87a0;font-size:.85rem;backgroun
   <div class="nav-in">
     <a class="brand" href="#top">SK<span>V</span></a>
     <div class="nav-links" id="navLinks">
-      <a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+      <a href="#work">Work</a><a href="#experience">Experience</a><a href="#stack">Stack</a><a href="#contact">Contact</a>
       <a class="btn btn-acc" href="resume.pdf" download>Résumé</a>
     </div>
     <button class="burger" id="burger" aria-label="Menu">☰</button>
@@ -145,34 +128,61 @@ footer{padding:26px 0;text-align:center;color:#7b87a0;font-size:.85rem;backgroun
 </nav>
 
 <header class="hero" id="top">
-  <div class="wrap hero-in">
-    <div>
-      <span class="eyebrow"><i></i>Open to AI engineering roles</span>
-      <h1>Sanjeev Kumar <em>Venkataraman</em></h1>
-      <div class="role">AI Engineer — Agentic AI Systems &amp; Data Governance</div>
-      <div class="visa">🇨🇦 Canadian citizen · TN-visa eligible · Open to roles in the US &amp; Canada</div>
-      <p class="lead">I build AI systems that survive contact with production. At CPP Investments I ship conversational AI and multi-agent systems on AWS Bedrock — sitting on top of data that's actually governed, so the answers are safe to act on, not just impressive in a demo.</p>
-      <div class="hero-cta">
-        <a class="btn btn-acc" href="resume.pdf" download>Download Résumé</a>
-        <a class="btn btn-ghost" href="#contact">Get in Touch</a>
-      </div>
-    </div>
-    <div class="hero-card">
-      <h3>At a glance</h3>
-      <div class="stat"><b>10+</b><span>Years in data &amp; AI</span></div>
-      <div class="stat"><b>4</b><span>AI systems in production</span></div>
-      <div class="stat"><b>95%</b><span>Data quality across domains</span></div>
-      <div class="stat"><b>7</b><span>Professional certifications</span></div>
+  <div class="wrap-narrow hero-in">
+    <div class="kicker">AI Engineering · Agentic Systems · Data Governance</div>
+    <h1>Sanjeev Kumar Venkataraman</h1>
+    <div class="statement">AI engineer shipping <em>production agentic systems</em> on data you can trust.</div>
+    <ul class="proof">
+      <li><b>4 production AI systems</b> on AWS Bedrock — an agentic governance harness, a readiness assistant, conversational assistants for risk &amp; investment teams, and knowledge &amp; incident intelligence.</li>
+      <li><b>10+ years</b> across investment management, banking, and consulting — holding <b>95% data quality</b> across domains at CPP Investments.</li>
+      <li>🇨🇦 Canadian citizen, <b>TN-visa eligible</b> — authorized to work in the US.</li>
+    </ul>
+    <div class="hero-cta">
+      <a class="btn btn-acc" href="resume.pdf" download>Download Résumé</a>
+      <a class="btn btn-ghost" href="#contact">Get in Touch</a>
     </div>
   </div>
 </header>
 
-<section id="about">
+<section id="work">
   <div class="wrap">
     <div class="sec-head rv">
-      <div class="kicker">About</div>
-      <h2>AI is easy to demo. Hard to trust. I work on the hard part.</h2>
-      <p>I've spent 10+ years in data — warehouses, BI, platforms, governance — across banking, consulting, and investment management. The last few years I've been working on the problem I find most interesting: making AI genuinely usable inside a large company.<br><br>That means pairing real AI engineering (RAG, agents, multi-agent workflows on Bedrock) with serious data governance — ontologies, quality rules, lineage, sign-offs — so what the system says is something the business can rely on. I'm at CPP Investments in Toronto now, leading data governance for Data &amp; Advanced Analytics and shipping production AI to risk and investment teams.</p>
+      <h2>Selected Work</h2>
+      <div class="sub">Systems in production, each one running against real enterprise data.</div>
+    </div>
+    <div class="rv">
+      <div class="work">
+        <span class="flag">Flagship</span>
+        <h3>Agentic Governance Harness for Data Products</h3>
+        <p>Most governance lives in documents nobody reads while building. This harness fixes that: ontology-driven agents working in production apply the firm's data governance standards automatically, at the moment data products and pipelines are being developed. They check data contracts, quality rules, lineage, ownership, and classification — then tell builders exactly what to fix, which DQ rules to add, and what's missing before sign-off.</p>
+        <p class="outcome">Findings tracked through to implementation, sign-off on evidence instead of promises, production deviations caught and reported — every release leaves the data estate more trusted than it found it.</p>
+        <div class="tags"><span class="tag">Multi-agent systems</span><span class="tag">AWS Bedrock</span><span class="tag">LangGraph</span><span class="tag">MCP</span><span class="tag">Ontology</span><span class="tag">Data contracts</span></div>
+      </div>
+      <div class="work">
+        <h3>AI Data Product Readiness Assistant</h3>
+        <p>One conversational workflow pulling together governance scorecards, data quality assessments, metadata standards, lineage docs, and approval evidence for production readiness reviews.</p>
+        <p class="outcome">Readiness reviews and governance committee decisions that took weeks now close in hours.</p>
+        <div class="tags"><span class="tag">AWS Bedrock</span><span class="tag">Claude</span><span class="tag">RAG</span><span class="tag">LangGraph</span></div>
+      </div>
+      <div class="work">
+        <h3>Conversational AI for Risk &amp; Investment Data</h3>
+        <p>Plain-English assistants for risk managers, investment analysts, and data stewards — ask about data products, risk metrics, incidents, lineage, and controls, and get answers with context instead of another dashboard to decode.</p>
+        <p class="outcome">Self-serve answers with explanations — fewer ad-hoc data pulls, faster decisions.</p>
+        <div class="tags"><span class="tag">LangChain</span><span class="tag">PGVector</span><span class="tag">Pinecone</span><span class="tag">FastAPI</span></div>
+      </div>
+      <div class="work">
+        <h3>Knowledge &amp; Incident Intelligence</h3>
+        <p>Semantic search across governance repositories, operational metadata, historical incidents, and enterprise documentation.</p>
+        <p class="outcome">Faster root-cause investigation and impact analysis on critical investment and risk datasets.</p>
+        <div class="tags"><span class="tag">Weaviate</span><span class="tag">Semantic search</span><span class="tag">Embeddings</span><span class="tag">AWS</span></div>
+      </div>
+    </div>
+    <div class="lab rv">
+      <div class="ic">🧪</div>
+      <div>
+        <b>In the lab</b>
+        <p>Next I'm building public demos in agentic AI — LangGraph agents, MCP servers, eval harnesses — to show the work, not just describe it. This section grows as they ship.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -180,142 +190,63 @@ footer{padding:26px 0;text-align:center;color:#7b87a0;font-size:.85rem;backgroun
 <section id="experience" class="alt">
   <div class="wrap">
     <div class="sec-head rv">
-      <div class="kicker">Experience</div>
-      <h2>Ten years, four roles, one through-line: trusted data</h2>
+      <h2>Experience</h2>
+      <div class="sub">Production AI, governance, and enterprise delivery — across three countries.</div>
     </div>
     <div class="timeline">
       <div class="t-item rv">
-        <div class="when">Aug 2020 — Present · Toronto, Canada</div>
-        <h3>Associate, Data Governance — Data &amp; Advanced Analytics</h3>
-        <div class="org">CPP Investments (Canada Pension Plan Investment Board)</div>
+        <div class="org">CPP Investments</div>
+        <div class="roleline">Associate, Data Governance — Data &amp; Advanced Analytics · Aug 2020 — Present · Toronto</div>
         <ul>
-          <li>Designed an <b>agentic governance harness</b>: ontology-driven agents that apply data governance standards automatically during data product development — suggesting DQ rules, tracking implementation, managing sign-off, and catching deviations in production.</li>
-          <li>Built an <b>AI Data Product Readiness Assistant</b> that pulls governance scorecards, quality assessments, lineage, and approval evidence into one conversational workflow for readiness reviews.</li>
-          <li>Shipped <b>conversational AI assistants for risk and investment data</b>, so analysts and stewards can ask plain-English questions about data products, metrics, incidents, and lineage.</li>
-          <li>Put <b>RAG and multi-agent systems into production</b> with AWS Bedrock, Claude, LangChain, LangGraph, MCP connectors, PGVector, Pinecone, and Weaviate.</li>
-          <li>Led teams across the US, Canada, and India; hold <b>95% data quality</b> across domains. Run the enterprise data portal on Collibra, Ataccama, and AWS DataZone.</li>
+          <li>Designed the <b>agentic governance harness</b> — ontology-driven agents that apply governance standards during data product development, suggest DQ rules, track implementation, and manage sign-off.</li>
+          <li>Built the <b>AI Data Product Readiness Assistant</b> and <b>conversational AI for risk &amp; investment data</b>, plus knowledge &amp; incident intelligence — all on AWS Bedrock with LangChain/LangGraph, MCP, and vector search.</li>
+          <li>Lead cross-functional teams across the US, Canada, and India; hold <b>95% data quality</b> across domains. Run the enterprise data portal on Collibra, Ataccama, and AWS DataZone.</li>
         </ul>
       </div>
       <div class="t-item rv">
-        <div class="when">May 2018 — Aug 2020 · Vancouver, Canada</div>
-        <h3>Senior Consultant, Business Intelligence &amp; Data Analytics</h3>
-        <div class="org">Groundswell Group (acquired by Deloitte Omnia AI)</div>
+        <div class="org">Groundswell Group <span style="font-weight:400;color:var(--muted)">(acquired by Deloitte Omnia AI)</span></div>
+        <div class="roleline">Senior Consultant, BI &amp; Data Analytics · May 2018 — Aug 2020 · Vancouver</div>
         <ul>
-          <li>Built mission-critical KPI scorecards in Tableau for business leaders; ran server administration and a BI Community of Practice.</li>
-          <li>Introduced Collibra-based governance for metadata and lineage; built semantic layers for secure, self-serve analytics.</li>
+          <li>Built mission-critical Tableau KPI scorecards for executives; introduced Collibra governance for metadata and lineage.</li>
         </ul>
       </div>
       <div class="t-item rv">
-        <div class="when">Sep 2017 — Dec 2017 · Toronto, Canada</div>
-        <h3>Business Intelligence Analyst — Performance Management Analytics</h3>
         <div class="org">Royal Bank of Canada</div>
+        <div class="roleline">BI Analyst, Performance Management Analytics · Sep 2017 — Dec 2017 · Toronto</div>
         <ul>
-          <li>Built Oracle BI dashboards for Personal and Commercial Banking; piped SAS SQL ETL underneath and migrated legacy reports to Tableau.</li>
+          <li>Oracle BI dashboards and SAS SQL pipelines for Personal &amp; Commercial Banking; migrated legacy reporting to Tableau.</li>
         </ul>
       </div>
       <div class="t-item rv">
-        <div class="when">Jun 2014 — Jul 2016 · Chennai, India</div>
-        <h3>Business Intelligence Developer</h3>
         <div class="org">LTI — Larsen &amp; Toubro Infotech</div>
+        <div class="roleline">BI Developer · Jun 2014 — Jul 2016 · Chennai, India</div>
         <ul>
-          <li>Built the data warehouse behind Unitrax, a SaaS banking platform, with Informatica and DataStage; automated ETL with UNIX scripting and shipped MicroStrategy dashboards on DB2.</li>
+          <li>Data warehouse behind Unitrax, a SaaS banking platform — Informatica, DataStage, UNIX automation, MicroStrategy on DB2.</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<section id="projects">
+<section id="stack">
   <div class="wrap">
     <div class="sec-head rv">
-      <div class="kicker">Selected work</div>
-      <h2>Things I've built and shipped</h2>
-      <p>Production systems, not prototypes — each one running against real enterprise data.</p>
+      <h2>Tech Stack</h2>
+      <div class="sub">Tools I use to ship.</div>
     </div>
-
-    <div class="feature rv">
-      <div>
-        <span class="flag">Flagship project</span>
-        <h3>Agentic Governance Harness for Data Products</h3>
-        <p>Most governance lives in documents nobody reads while building. This harness fixes that. It's an ontology-driven system where agents working in production apply the firm's data governance standards automatically — at the exact moment data products and pipelines are being developed.</p>
-        <p>As teams build, the agents check their work against data contracts, quality rules, lineage requirements, ownership, and classifications. They give immediate, specific feedback: which DQ rules to add, what's missing before sign-off, where a design drifts from policy. Every finding is tracked through to implementation. Deviations in production get caught and reported. Each cycle ends with a clear view of what improved and what's still open.</p>
-        <p>The loop closes: every release leaves the data estate more governed than it found it. The result is data products teams trust enough to actually adopt — safer, cleaner, and ready for production sign-off.</p>
-        <div class="tags">
-          <span class="tag">Multi-agent systems</span><span class="tag">AWS Bedrock</span><span class="tag">LangGraph</span><span class="tag">Ontology</span><span class="tag">Data contracts</span><span class="tag">DQ rules</span><span class="tag">Governance sign-off</span>
-        </div>
-      </div>
-      <div class="feature-side">
-        <h4>How the loop runs</h4>
-        <div class="fstep"><b>1</b><span>Agents evaluate the data product against governance standards as it's built</span></div>
-        <div class="fstep"><b>2</b><span>Builders get specific feedback: DQ rules to add, gaps to close</span></div>
-        <div class="fstep"><b>3</b><span>Implementation is tracked; sign-off happens on evidence, not promises</span></div>
-        <div class="fstep"><b>4</b><span>Production deviations are caught, reported, and fed back into the next cycle</span></div>
-      </div>
-    </div>
-
-    <div class="grid3">
-      <div class="card rv">
-        <div class="icon">💬</div>
-        <h3>AI Data Product Readiness Assistant</h3>
-        <p>One conversational workflow that pulls together governance scorecards, quality assessments, metadata standards, lineage docs, and approval evidence — so readiness reviews and committee decisions happen in hours, not weeks.</p>
-        <div class="tags"><span class="tag">AWS Bedrock</span><span class="tag">Claude</span><span class="tag">LangGraph</span><span class="tag">RAG</span><span class="tag">MCP</span></div>
-      </div>
-      <div class="card rv">
-        <div class="icon">📈</div>
-        <h3>Conversational AI for Risk &amp; Investment Data</h3>
-        <p>Plain-English assistants for risk managers, analysts, and stewards — ask about data products, risk metrics, incidents, lineage, and controls, and get answers with context instead of another dashboard to decode.</p>
-        <div class="tags"><span class="tag">LangChain</span><span class="tag">PGVector</span><span class="tag">Pinecone</span><span class="tag">FastAPI</span><span class="tag">Multi-agent</span></div>
-      </div>
-      <div class="card rv">
-        <div class="icon">🔍</div>
-        <h3>Knowledge &amp; Incident Intelligence</h3>
-        <p>Semantic search across governance repositories, operational metadata, past incidents, and enterprise docs — built for impact analysis, root-cause investigation, and keeping critical datasets healthy.</p>
-        <div class="tags"><span class="tag">Weaviate</span><span class="tag">Semantic Search</span><span class="tag">Embeddings</span><span class="tag">AWS</span><span class="tag">React</span></div>
-      </div>
+    <div class="rv">
+      <div class="stack-row"><div class="lbl">AI &amp; Agents</div><div class="items">AWS Bedrock · Claude · OpenAI · LangChain · LangGraph · RAG · Multi-agent systems · MCP · Prompt engineering · AI governance</div></div>
+      <div class="stack-row"><div class="lbl">Data</div><div class="items">Collibra · Ataccama · AWS DataZone · Great Expectations · Glue DQ · dbt · Pinecone · Weaviate · PGVector · Spark</div></div>
+      <div class="stack-row"><div class="lbl">Cloud &amp; Platform</div><div class="items">AWS · Docker · Kubernetes / EKS · Terraform · GitHub Actions · Lambda · API Gateway</div></div>
+      <div class="stack-row"><div class="lbl">Languages</div><div class="items">Python · TypeScript · React · FastAPI · Flask · SQL · GraphQL</div></div>
     </div>
   </div>
 </section>
 
-<section id="skills" class="alt">
+<section id="credentials" class="alt">
   <div class="wrap">
     <div class="sec-head rv">
-      <div class="kicker">Technical skills</div>
-      <h2>The toolkit I reach for</h2>
-    </div>
-    <div class="skills-grid">
-      <div class="skill-box rv">
-        <h3><i>🧠</i>Generative AI &amp; Agentic Systems</h3>
-        <div class="pills"><span class="pill">AWS Bedrock</span><span class="pill">Claude</span><span class="pill">OpenAI</span><span class="pill">LangChain</span><span class="pill">LangGraph</span><span class="pill">RAG</span><span class="pill">Agentic AI</span><span class="pill">Multi-Agent Systems</span><span class="pill">MCP</span><span class="pill">Prompt Engineering</span><span class="pill">AI Governance</span><span class="pill">Human-in-the-Loop</span></div>
-      </div>
-      <div class="skill-box rv">
-        <h3><i>🔎</i>Vector Search &amp; Retrieval</h3>
-        <div class="pills"><span class="pill">PGVector</span><span class="pill">Pinecone</span><span class="pill">Weaviate</span><span class="pill">Semantic Search</span><span class="pill">Hybrid Search</span><span class="pill">Embedding Models</span><span class="pill">Context Engineering</span><span class="pill">Document Chunking</span></div>
-      </div>
-      <div class="skill-box rv">
-        <h3><i>💻</i>Programming &amp; App Development</h3>
-        <div class="pills"><span class="pill">Python</span><span class="pill">SQL</span><span class="pill">TypeScript</span><span class="pill">JavaScript</span><span class="pill">React</span><span class="pill">Flask</span><span class="pill">FastAPI</span><span class="pill">REST APIs</span><span class="pill">GraphQL</span><span class="pill">R</span><span class="pill">HTML5/CSS3</span></div>
-      </div>
-      <div class="skill-box rv">
-        <h3><i>☁️</i>Cloud, DevOps &amp; Platform</h3>
-        <div class="pills"><span class="pill">AWS</span><span class="pill">Azure</span><span class="pill">GCP</span><span class="pill">Docker</span><span class="pill">Kubernetes/EKS</span><span class="pill">Terraform</span><span class="pill">GitHub Actions</span><span class="pill">Lambda</span><span class="pill">API Gateway</span><span class="pill">S3</span><span class="pill">Athena</span><span class="pill">MWAA</span><span class="pill">Spark</span></div>
-      </div>
-      <div class="skill-box rv">
-        <h3><i>🛡️</i>Data Governance, Quality &amp; ETL</h3>
-        <div class="pills"><span class="pill">Collibra</span><span class="pill">Ataccama</span><span class="pill">AWS DataZone</span><span class="pill">Great Expectations</span><span class="pill">AWS Glue DQ</span><span class="pill">dbt</span><span class="pill">Informatica</span><span class="pill">DataStage</span><span class="pill">Lineage</span><span class="pill">Data Contracts</span></div>
-      </div>
-      <div class="skill-box rv">
-        <h3><i>📊</i>Databases &amp; BI</h3>
-        <div class="pills"><span class="pill">PostgreSQL</span><span class="pill">Redshift</span><span class="pill">BigQuery</span><span class="pill">MongoDB</span><span class="pill">Neo4j</span><span class="pill">Tableau</span><span class="pill">Power BI</span><span class="pill">QuickSight</span><span class="pill">MicroStrategy</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="credentials">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <div class="kicker">Credentials</div>
-      <h2>Certifications &amp; education</h2>
+      <h2>Credentials</h2>
     </div>
     <div class="two-col">
       <div class="panel rv">
@@ -325,28 +256,24 @@ footer{padding:26px 0;text-align:center;color:#7b87a0;font-size:.85rem;backgroun
         <div class="cert"><div class="badge">Tb</div><div><b>Tableau Server Certified Associate</b><span>Tableau Software</span></div></div>
         <div class="cert"><div class="badge">Tb</div><div><b>Tableau Data Scientist</b><span>Tableau Software</span></div></div>
         <div class="cert"><div class="badge">Tb</div><div><b>Tableau Server Architect</b><span>Tableau Software</span></div></div>
-        <div class="cert"><div class="badge">IIT</div><div><b>Data Analytics Certificate</b><span>Indian Institute of Technology, Madras</span></div></div>
-        <div class="cert"><div class="badge">G</div><div><b>Advanced Google Analytics Certificate</b><span>Google</span></div></div>
+        <div class="cert"><div class="badge">IIT</div><div><b>Data Analytics Certificate</b><span>IIT Madras</span></div></div>
       </div>
       <div class="panel rv">
         <h3>Education</h3>
         <div class="edu"><div class="yr">2016 — 2018</div><b>Master of Management Sciences</b><span>University of Waterloo — Graduate Diploma in Data Analytics</span></div>
-        <div class="edu"><div class="yr">2010 — 2014</div><b>Bachelor of Engineering, Electronics &amp; Communication</b><span>Anna University, Chennai</span></div>
-        <h3 style="margin-top:28px">Currently</h3>
-        <div class="edu"><b>Associate, Data Governance</b><span>CPP Investments · Data &amp; Advanced Analytics · Toronto</span></div>
+        <div class="edu"><div class="yr">2010 — 2014</div><b>B.E., Electronics &amp; Communication</b><span>Anna University, Chennai</span></div>
       </div>
     </div>
   </div>
 </section>
 
 <section id="contact" class="contact">
-  <div class="wrap rv">
-    <div class="kicker" style="color:#7ee8e8">Contact</div>
-    <h2>Let's talk about AI that holds up in production</h2>
-    <p>I'm interested in AI engineering and applied AI roles — agentic systems, RAG, and the governance that makes them trustworthy — as well as collaborations and good technical conversations.</p>
-    <p class="visa-note">🇨🇦 Canadian citizen · TN-visa eligible · Open to roles across Canada and the US</p>
+  <div class="wrap-narrow rv">
+    <h2>Let's talk</h2>
+    <p>I'm interested in AI engineering and applied AI work — agentic systems, RAG, and the governance that makes them trustworthy — plus good technical conversations.</p>
+    <p class="tn">🇨🇦 Canadian citizen · TN-visa eligible · Authorized to work in the US</p>
     <div class="c-links">
-      <a class="c-link" href="mailto:sanjeevkvenkat@gmail.com">✉️ Email me</a>
+      <a class="c-link" href="mailto:sanjeevkvenkat@gmail.com">✉️ Email</a>
       <a class="c-link" href="https://www.linkedin.com/in/sanjeev-kumar-venkataraman" target="_blank" rel="noopener">💼 LinkedIn</a>
       <a class="c-link" href="https://github.com/sanjeevkvenkat" target="_blank" rel="noopener">💻 GitHub</a>
       <a class="c-link" href="resume.pdf" download>📄 Résumé</a>
